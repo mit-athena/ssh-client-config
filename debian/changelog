@@ -1,3 +1,11 @@
+debathena-ssh-client-config (1.7) UNRELEASED; urgency=medium
+
+  * Disable GSSAPIKeyExchange.  Unfortunately, it seems to have security
+    problems with hostname canonicalization for which we currently have no
+    mitigation mechanism.  (Trac: #1386)
+
+ -- Anders Kaseorg <andersk@mit.edu>  Sun, 02 Feb 2014 19:58:05 -0500
+
 debathena-ssh-client-config (1.6) unstable; urgency=low
 
   [ Jonathan Reed ]
