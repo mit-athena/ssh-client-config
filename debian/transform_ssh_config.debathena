@@ -1,4 +1,7 @@
 #!/usr/bin/perl -0p
 s/^\s*#?\s*GSSAPIAuthentication.*\n//mg;
 s/$/\n    GSSAPIAuthentication yes/ or die;
+my $openssh_ver = qx'dpkg-query -W -f \${Version} openssh-client';
+if (system('dpkg', '--compare-versions', $openssh_ver, 'ge', '1:5.9p1') == 0) {
 s/$/\n    GlobalKnownHostsFile \/etc\/ssh\/ssh_known_hosts \/etc\/ssh\/ssh_known_hosts2 \/etc\/ssh\/ssh_known_hosts.debathena/ or die;
+}
