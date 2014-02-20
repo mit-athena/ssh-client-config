@@ -1,3 +1,12 @@
+debathena-ssh-client-config (1.8) unstable; urgency=medium
+
+  * The GlobalKnownHostsFile fix we added in 1.7 does not work on ancient
+    ssh clients.  Only include it when the target ssh client supports it
+    (Trac: #1435)
+  * This version should be a no-op for people running Precise+ and Wheezy+
+
+ -- Jonathan Reed <jdreed@mit.edu>  Thu, 20 Feb 2014 14:04:07 -0500
+
 debathena-ssh-client-config (1.7) unstable; urgency=medium
 
   * Disable GSSAPIKeyExchange.  Unfortunately, it seems to have security
