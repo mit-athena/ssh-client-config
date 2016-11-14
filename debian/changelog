@@ -1,3 +1,9 @@
+debathena-ssh-client-config (1.9) unstable; urgency=medium
+
+  * Remove debathena-ssh-client build dependency.
+
+ -- Anders Kaseorg <andersk@mit.edu>  Sun, 13 Nov 2016 20:10:57 -0500
+
 debathena-ssh-client-config (1.8) unstable; urgency=medium
 
   * The GlobalKnownHostsFile fix we added in 1.7 does not work on ancient
